@@ -54,7 +54,7 @@ const Login = () => {
                         navigate('/login');
                     } else {
                         window.location.reload(1);
-                        navigate('/');
+                        // navigate('/');
                     }
                 }
             }

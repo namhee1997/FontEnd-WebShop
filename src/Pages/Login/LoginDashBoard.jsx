@@ -46,7 +46,7 @@ const LoginDashBoard = () => {
                 let obj = jwtDecode(e);
                 if (obj.isDashBoard == true) {
                     window.location.reload(1);
-                    navigate('/dashboard');
+                    // navigate('/dashboard');
                 }
             }
         }).catch((err) => {
