@@ -3018,3 +3018,17 @@ a:hover {
   }
 
 }
+
+.err_login p {
+  color: #ca0101;
+}
+
+
+p.err {
+  font-size: 9px;
+  color: #ca0101;
+  text-align: left;
+  line-height: 1;
+  margin: 5px 0 0 0;
+  font-weight: 300;
+}

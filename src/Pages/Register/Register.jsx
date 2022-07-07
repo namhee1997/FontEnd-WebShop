@@ -38,12 +38,16 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let data = await registerUserApi(dataLogin, dispatch, navigate).then((e) => {
-            if (e == 'success') {
-                navigate('/login');
-            }
-        }).catch((err) => {
-        });
+        if (/^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g.test(dataLogin.username)) {
+            let data = await registerUserApi(dataLogin, dispatch, navigate).then((e) => {
+                if (e == 'success') {
+                    navigate('/login');
+                }
+            }).catch((err) => {
+            });
+        } else {
+            setRequireUsername(true);
+        }
     }
 
     return (
@@ -57,7 +61,7 @@ const Register = () => {
                     />
                 </div>
                 <div className="box_login n1">
-                    <label>USERNAME</label>
+                    <label>USERNAME(write no about,no spaces)</label>
                     <input type="text" placeholder="Enter your username"
                         onChange={(e) => setDataLogin({ ...dataLogin, username: e.target.value })}
                     />
