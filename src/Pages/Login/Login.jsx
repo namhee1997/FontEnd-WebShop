@@ -53,6 +53,7 @@ const Login = () => {
                     if (obj.exp < date.getTime() / 1000) {
                         navigate('/login');
                     } else {
+                        window.location.reload(1);
                         navigate('/');
                     }
                 }
