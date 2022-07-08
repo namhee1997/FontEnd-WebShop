@@ -17,6 +17,8 @@ const Register = () => {
         phone: '',
     });
 
+    const [requireUsername, setRequireUsername] = useState(false);
+
     // check logger
     const tokenUserCurrent = (localStorage.getItem('token') || '');
     const [userCurrentByToken, setUserCurrentByToken] = useState({});
@@ -47,7 +49,9 @@ const Register = () => {
             });
         } else {
             setRequireUsername(true);
+
         }
+
     }
 
     return (
@@ -61,10 +65,13 @@ const Register = () => {
                     />
                 </div>
                 <div className="box_login n1">
-                    <label>USERNAME(write no about,no spaces)</label>
+                    <label>USERNAME</label>
                     <input type="text" placeholder="Enter your username"
                         onChange={(e) => setDataLogin({ ...dataLogin, username: e.target.value })}
                     />
+                    {
+                        requireUsername ? <p className="err">malformed data(data must be unsigned, no spaces)</p> : ''
+                    }
                 </div>
                 <div className="box_login">
                     <label>PASSWORD</label>
