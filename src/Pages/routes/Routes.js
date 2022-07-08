@@ -105,7 +105,7 @@ export default function Router() {
                 location[1] != 'dashboard' ?
                     <>
                         {
-                            location[1] != "login" ? <NavBar userCurrent={userCurrentByToken} refresh={handleRefresh} /> : ''
+                            location[1] != "login" ? <NavBar userCurrent={userCurrentByToken} handleRedirect={handleRedirect} refresh={handleRefresh} /> : ''
                         }
 
                         <div className="App">
@@ -124,7 +124,7 @@ export default function Router() {
                     : <>
                         <div className="DashBoard">
                             {
-                                location[2] != "login" ? <HeaderDashBoard userCurrent={userCurrentByToken} /> : ''
+                                location[2] != "login" ? <HeaderDashBoard handleRedirect={handleRedirect} userCurrent={userCurrentByToken} /> : ''
                             }
 
                             <Routes>
