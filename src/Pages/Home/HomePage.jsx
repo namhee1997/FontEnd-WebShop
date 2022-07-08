@@ -39,8 +39,7 @@ const HomePage = ({ handleRedirect }) => {
   const [listNews, setListNews] = useState([
 
   ]);
-  const [listBanner, setListBanner] = useState([
-  ]);
+  const [listBanner, setListBanner] = useState([]);
 
   //get all slides
 
