@@ -47,6 +47,7 @@ const LoginDashBoard = () => {
                 if (obj.isDashBoard == true) {
                     window.location.reload(1);
                     // navigate('/dashboard');
+
                 }
             }
         }).catch((err) => {
