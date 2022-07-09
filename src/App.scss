@@ -3043,3 +3043,29 @@ p.err {
   margin: 5px 0 0 0;
   font-weight: 300;
 }
+
+button.slick-arrow.slick-prev:before {
+  content: "\f138";
+  font-family: 'FontAwesome';
+  color: #1694d6;
+  font-size: 26px;
+}
+
+button.slick-arrow.slick-prev {
+  transform: rotate(180deg);
+  left: 10px;
+  z-index: 999;
+}
+
+
+button.slick-arrow.slick-next:before {
+  content: "\f138";
+  font-family: 'FontAwesome';
+  color: #1694d6;
+  font-size: 26px;
+}
+
+button.slick-arrow.slick-next {
+  right: 10px;
+  z-index: 999;
+}
