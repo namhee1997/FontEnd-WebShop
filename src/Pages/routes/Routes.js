@@ -105,7 +105,7 @@ export default function Router() {
                 location[1] != 'dashboard' ?
                     <>
                         {
-                            location[1] != "login" ? <NavBar userCurrent={userCurrentByToken} handleRedirect={handleRedirect} refresh={handleRefresh} /> : ''
+                            location[1] != "login" || location[1] != 'register' ? <NavBar userCurrent={userCurrentByToken} handleRedirect={handleRedirect} refresh={handleRefresh} /> : ''
                         }
 
                         <div className="App">
